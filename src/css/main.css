@@ -1,0 +1,285 @@
+.sprite,
+.listing-button,
+.info-button,
+.complete:before,
+.intro nav a,
+.intro nav a:hover,
+.intro nav a:active,
+.intro nav a:not(:first-child),
+.intro nav a.prev,
+.intro nav a.next,
+.intro nav a.explore {
+  background: url(/img/sprite.svg) no-repeat;
+  display: inline-block;
+  font-size: 0;
+  border: none;
+}
+
+html,
+body,
+.content {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Helvetica Bold', 'Arial Bold', sans-serif;
+}
+
+html {
+  -webkit-user-select: none;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+.ui-button {
+  min-width: 210px;
+  padding: .7em 1em;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  cursor: default;
+  font-size: 18px;
+  line-height: 20px;
+  background: #aaa;
+  color: #fff;
+}
+
+.ui-button:hover {
+  background: #ccc;
+}
+
+.ui-button:active {
+  background: #787878;
+}
+
+.ui-button.primary-button {
+  background: #e55050;
+}
+
+.ui-button.primary-button:hover {
+  background: #ff5959;
+}
+
+.ui-button.primary-button:active {
+  background: #a63a3a;
+}
+
+@media screen and (max-device-width: 320px) {
+  .ui-button {
+    min-width: 160px;
+  }
+}
+
+.touch-visual {
+  pointer-events: none;
+  width: 50px;
+  height: 50px;
+  margin: -25px 0 0 -25px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.listing-button,
+.info-button {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 40px;
+  z-index: 1;
+  opacity: .3;
+}
+
+.listing-button:hover,
+.info-button:hover {
+  opacity: .2;
+}
+
+.listing-button:active,
+.info-button:active {
+  opacity: .5;
+}
+
+.listing-button:before,
+.info-button:before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  bottom: -30px;
+  left: -30px;
+}
+
+.listing-button {
+  background-position: -160px 0;
+  left: 40px;
+}
+
+.info-button {
+  background-position: -190px 0;
+  right: 40px;
+}
+
+.complete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 230px;
+  height: 228px;
+  margin: auto;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.complete:before {
+  content: '';
+  background-position: -220px 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+.intro {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 40px;
+  margin: auto;
+}
+
+.intro > div {
+  background: #fcfaed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  height: 100%;
+}
+
+.intro > div h1 {
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+.intro > div ol,
+.intro > div p {
+  max-width: 420px;
+}
+
+.intro > div ol {
+  list-style-position: inside;
+  margin: 0;
+}
+
+.intro > div ol li:not(:first-child) {
+  margin-top: 1.3em;
+}
+
+.intro > div .play-button {
+  margin-top: 40px;
+}
+
+.intro:not([hidden]) + .content {
+  -webkit-filter: blur(30px);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.intro nav {
+  margin-top: 60px;
+}
+
+.intro nav a {
+  width: 30px;
+  height: 30px;
+  opacity: .3;
+}
+
+.intro nav a:hover {
+  opacity: .2;
+}
+
+.intro nav a:active {
+  opacity: .5;
+}
+
+.intro nav a:not(:first-child) {
+  margin-left: 25px;
+}
+
+.intro nav a.prev {
+  background-position: -100px 0;
+}
+
+.intro nav a.next {
+  background-position: -130px 0;
+}
+
+.intro nav a.explore {
+  background-position: -160px 0;
+}
+
+@media screen and (max-device-width: 400px) {
+  .intro {
+    padding: 25px;
+  }
+
+  .intro > div h1 {
+    font-size: 35px;
+  }
+}
+
+.content {
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-filter 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  transition: -webkit-filter 0.5s ease-in, -ms-transform 0.5s ease-in;
+  transition: -webkit-filter 0.5s ease-in, -o-transform 0.5s ease-in;
+  transition: -webkit-filter 0.5s ease-in, transform 0.5s ease-in;
+}

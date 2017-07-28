@@ -1,0 +1,6 @@
+.sprite {
+  background: url(/img/sprite.svg) no-repeat;
+  display: inline-block;
+  font-size: 0;
+  border: none;
+}

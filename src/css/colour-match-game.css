@@ -1,0 +1,94 @@
+.content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.block-background,
+.lines-background {
+  -webkit-transition: background 0.2s ease-out;
+  -o-transition: background 0.2s ease-out;
+  transition: background 0.2s ease-out;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+}
+
+.block-background {
+  background: #bfbfbf;
+  left: 0;
+}
+
+.lines-background {
+  background: #404040;
+  right: 0;
+}
+
+.one-color {
+  width: 750px;
+  height: 228px;
+  position: relative;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.one-color > div {
+  position: absolute;
+  height: 100%;
+  width: 230px;
+}
+
+.one-color .block,
+.one-color .lines div {
+  background: #808080;
+}
+
+.one-color .block {
+  left: 0;
+}
+
+.one-color .lines {
+  right: 0;
+}
+
+.one-color .lines div {
+  height: 30px;
+  margin-bottom: 36px;
+  position: relative;
+}
+
+.one-color .lines div:not(.interacting) {
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  -o-transition: -o-transform 0.2s ease-out;
+  transition: -ms-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+}
+
+.one-color .lines div:after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  background: transparent;
+}

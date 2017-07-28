@@ -1,0 +1,146 @@
+html,
+body,
+.content {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  background: #fcf9ed;
+}
+
+.content {
+  padding: 80px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.content h1 {
+  font-size: 20px;
+}
+
+.content h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  display: none;
+}
+
+.content h1,
+.content h2 {
+  -webkit-transition: opacity 0.2s ease-in;
+  -o-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+  min-height: 1em;
+}
+
+.content h1:empty::after,
+.content h2:empty::after {
+  content: '\00a0';
+}
+
+.content h1:empty,
+.content h2:empty {
+  opacity: 0;
+}
+
+.display {
+  display: block;
+  -webkit-backface-visibility: hidden;
+  height: 75%;
+}
+
+.display path {
+  -webkit-transition: opacity 0.1s ease-in;
+  -o-transition: opacity 0.1s ease-in;
+  transition: opacity 0.1s ease-in;
+}
+
+.display path:not(.selected) {
+  opacity: .05;
+}
+
+.description {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 15%;
+}
+
+.nav {
+  font-size: 0;
+  margin-top: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 10%;
+  text-align: center;
+}
+
+.nav li {
+  width: 35px;
+  margin-left: 25px;
+  height: 35px;
+  display: inline-block;
+  position: relative;
+}
+
+.nav li:first-child {
+  margin-left: 0;
+}
+
+.nav li:after {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  bottom: -25px;
+  right: -25px;
+  background: transparent;
+}
+
+.nav li path {
+  -webkit-transition: fill 0.2s ease-in;
+  -o-transition: fill 0.2s ease-in;
+  transition: fill 0.2s ease-in;
+  stroke-width: 2;
+  stroke: #000;
+}
+
+.nav li:not(.selected) path {
+  fill: rgba(150, 140, 140, 0);
+}
+
+.nav li:not(.selected) path.selected {
+  fill: rgba(150, 140, 140, 0.5);
+}
+
+.nav li.selected path:not(.selected) {
+  fill: rgba(150, 140, 140, 0);
+}

@@ -1,0 +1,165 @@
+.sprite,
+.social-link,
+.return-link {
+  background: url(/img/sprite.svg) no-repeat;
+  display: inline-block;
+  font-size: 0;
+  border: none;
+}
+
+html,
+body,
+section {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  background: #fcf9ed;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.social-link {
+  width: 30px;
+  height: 30px;
+}
+
+.return-link {
+  width: 40px;
+  height: 40px;
+  background-position: -60px 0;
+  opacity: .3;
+}
+
+.return-link:hover {
+  opacity: .2;
+}
+
+.return-link:active {
+  opacity: .5;
+}
+
+.facebook-link {
+  background-position: -30px 0;
+}
+
+.introduction,
+.about {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.introduction {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 50px;
+}
+
+.introduction h1 {
+  margin-bottom: 60px;
+}
+
+.introduction p {
+  margin-bottom: 70px;
+  font-size: 18px;
+}
+
+.introduction .ui-button {
+  margin-bottom: .3em;
+  display: block;
+}
+
+.about {
+  padding: 0 30px;
+}
+
+.about p {
+  margin-top: 1.3em;
+  text-align: center;
+  max-width: 330px;
+}
+
+.about p:first-child {
+  margin-top: 0;
+}
+
+.about .social-links {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 0;
+}
+
+.about .social-links li {
+  display: inline;
+  margin: 0 .15em;
+}
+
+.about .return-link {
+  margin-top: 80px;
+}
+
+.interactions {
+  height: 100%;
+}
+
+.interactions a {
+  height: 50%;
+  width: 33.333%;
+  display: inline-block;
+  border: none;
+}
+
+.interactions img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (orientation: portrait) {
+  .interactions a {
+    width: 50%;
+    height: 33.333%;
+  }
+}
