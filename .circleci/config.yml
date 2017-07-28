@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - run: npm install firebase-tools
+      - deploy:
+          name: Deploy Master to Firebase
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN --non-interactive
+            fi
