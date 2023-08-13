@@ -1,0 +1,107 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+html, body .shell {
+    height: 100%;
+}
+
+html {
+    font-family: sans-serif;
+    background: #1200B2 linear-gradient(35deg, #4c3d9a, #615aa7);
+    color: #f2f2f2;
+}
+
+
+.shell {
+    display: flex;
+    flex-flow: column;
+}
+
+.shell .appbar {
+    background: #f17a8d;
+    border-bottom: 3px solid #524a8a;
+}
+
+.shell .view {
+    flex: auto;
+}
+
+.shell .overlay {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+}
+
+
+.appbar {
+    box-sizing: border-box;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+
+.swenk-view {
+    margin: 15px;
+}
+
+.loader {
+    display: inline-flex;
+    margin: 0 auto 20px;/* what */
+}
+
+.loader svg {
+    display: block;
+}
+
+.loader polyline {
+    fill: none;
+    stroke: currentColor;
+    stroke-dasharray: 343 343;
+    stroke-width: 5;
+    animation: loader-strokes 2s infinite;
+}
+
+@keyframes loader-strokes {
+    
+    50% {
+        stroke-dashoffset: 343;
+    }
+
+    100% {
+        stroke-dashoffset: 686;
+    }
+}
+
+.tiles {
+    display: grid;
+    grid: auto-flow dense / repeat(auto-fit, minmax(160px, 1fr));
+    grid-gap: 15px;
+}
+
+
+.tile {
+    background: #ffd560;
+}
+
+.tile::before {
+    content: '';
+    display: block;
+    height: 0;
+    padding-bottom: 100%;
+}
+
+.spotify-widget {
+    background: rgba(0, 0, 0, 0.7);
+    height: 45px;
+    width: 240px;
+}
